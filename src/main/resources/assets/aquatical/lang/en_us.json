@@ -1,0 +1,13 @@
+{
+  "item.aquatical.sardine": "Sardine",
+  "item.aquatical.cooked_sardine": "Cooked Sardine",
+
+  "item.aquatical.diving_helmet": "Diving Helmet",
+
+  "item.aquatical.thresher_shark_spawn_egg": "Thresher Shark Spawn Egg",
+
+  "block.aquatical.barrel_sponge": "Barrel Sponge",
+  "block.aquatical.dead_barrel_sponge": "Dead Barrel Sponge",
+
+  "itemGroup.aquaticaltab": "Aquatical Mod"
+}

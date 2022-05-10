@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "aquatical:dead_barrel_sponge"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sponge",
+    "count": 4
+  }
+}
