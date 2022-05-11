@@ -8,16 +8,16 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class ThreshersharkModel extends AnimatedGeoModel<ThreshersharkEntity> {
     @Override
     public ResourceLocation getModelLocation(ThreshersharkEntity object) {
-        return new ResourceLocation(Aquatical.MOD_ID, "geo/Thresher.geo.json");
+        return new ResourceLocation(Aquatical.MOD_ID, "geo/thresher.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(ThreshersharkEntity object) {
-        return new ResourceLocation(Aquatical.MOD_ID, "textures/entity/Thresher/Thresher.png");
+        return new ResourceLocation(Aquatical.MOD_ID, "textures/entity/thresher/thresher.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(ThreshersharkEntity animatable) {
-        return new ResourceLocation(Aquatical.MOD_ID, "animations/Thresher.animation.json");
+        return new ResourceLocation(Aquatical.MOD_ID, "animations/animation.thresher.json");
     }
 }

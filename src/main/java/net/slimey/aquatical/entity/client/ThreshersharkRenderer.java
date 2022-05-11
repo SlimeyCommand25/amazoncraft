@@ -18,7 +18,7 @@ public class ThreshersharkRenderer extends GeoEntityRenderer<ThreshersharkEntity
 
     @Override
     public ResourceLocation getTextureLocation(ThreshersharkEntity instance) {
-        return new ResourceLocation(Aquatical.MOD_ID, "textures/entity/Thresher/Thresher.png");
+        return new ResourceLocation(Aquatical.MOD_ID, "textures/entity/thresher/thresher.png");
     }
 
     @Override
