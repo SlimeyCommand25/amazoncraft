@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "aquatical:sardine"
+    "item": "aquatical:raw_sardine"
   },
   "result": "aquatical:cooked_sardine",
   "experience": 0.1,

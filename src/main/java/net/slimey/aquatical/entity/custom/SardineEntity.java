@@ -9,7 +9,10 @@ import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
+import net.minecraft.world.entity.ai.goal.TryFindWaterGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.AbstractFish;
 import net.minecraft.world.entity.animal.Animal;
@@ -27,10 +30,10 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 
-public class ThreshersharkEntity extends Animal implements IAnimatable {
+public class SardineEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public ThreshersharkEntity(EntityType<? extends Animal> entityType, Level level) {
+    public SardineEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -58,11 +61,11 @@ public class ThreshersharkEntity extends Animal implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.thresher.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sardine.swim", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.thresher.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.sardine.swim", true));
         return PlayState.CONTINUE;
     }
 

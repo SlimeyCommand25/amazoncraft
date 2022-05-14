@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "aquatical:item/sardine"
+    "layer0": "aquatical:item/gold_coin"
   }
 }
