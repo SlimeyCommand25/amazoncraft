@@ -6,12 +6,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -26,20 +23,18 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-import java.util.function.Predicate;
 
-
-public class ThreshersharkEntity extends AbstractSchoolingFish implements IAnimatable {
+public class PayaraEntity extends AbstractSchoolingFish implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public ThreshersharkEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level level) {
+    public PayaraEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 25.0D)
-                .add(Attributes.ATTACK_DAMAGE, 4.0f)
+                .add(Attributes.MAX_HEALTH, 6.0D)
+                .add(Attributes.ATTACK_DAMAGE, 1.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
                 .add(Attributes.MOVEMENT_SPEED, 1.2f).build();
     }
@@ -47,11 +42,11 @@ public class ThreshersharkEntity extends AbstractSchoolingFish implements IAnima
     @Nullable
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.thresher.idle", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.payara.swim", true));
             return PlayState.CONTINUE;
         }
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.thresher.walk", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.payara.swim", true));
         return PlayState.CONTINUE;
     }
 
@@ -68,16 +63,14 @@ public class ThreshersharkEntity extends AbstractSchoolingFish implements IAnima
 
     @Override
     protected void registerGoals() {
-
+        this.goalSelector.addGoal(0, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(1, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(2, (new RandomSwimmingGoal(this, 1.0D, 10)));
-        this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.0D, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, SardineEntity.class, 10, true, true, (Predicate<LivingEntity>)null));
-        this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
-
+        this.goalSelector.addGoal(3, new FollowFlockLeaderGoal(this));
     }
-        public ItemStack getBucketItemStack() {
+
+    @Override
+    public ItemStack getBucketItemStack() {
         return new ItemStack(Items.COD_BUCKET);
     }
 

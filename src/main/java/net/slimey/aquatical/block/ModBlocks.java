@@ -14,7 +14,6 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.slimey.aquatical.block.custom.BarrelSponge;
 import net.slimey.aquatical.item.ModCreativeModeTab;
 import net.slimey.aquatical.item.ModItems;
 

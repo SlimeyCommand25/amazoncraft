@@ -13,39 +13,39 @@
 			"bones": [
 				{
 					"name": "Sardine",
-					"pivot": [0, 13, -5]
+					"pivot": [0.5, 1, 0]
 				},
 				{
 					"name": "Body",
 					"parent": "Sardine",
-					"pivot": [-0.5, 13, -4],
+					"pivot": [0.5, 1, 1],
 					"cubes": [
-						{"origin": [-1, 12, -8], "size": [1, 2, 8], "uv": [0, 0]},
-						{"origin": [-0.5, 14, -5], "size": [0, 1, 2], "uv": [4, 0]}
+						{"origin": [-0.5, 0, -3], "size": [1, 2, 8], "uv": [0, 0]},
+						{"origin": [0, 2, 0], "size": [0, 1, 2], "uv": [4, 0]}
 					]
 				},
 				{
 					"name": "Tail",
 					"parent": "Body",
-					"pivot": [-0.5, 13, 0],
+					"pivot": [0.5, 1, 5],
 					"cubes": [
-						{"origin": [-0.5, 11.5, 0], "size": [0, 3, 2], "uv": [0, 0]}
+						{"origin": [0, -0.5, 5], "size": [0, 3, 2], "uv": [0, 0]}
 					]
 				},
 				{
 					"name": "RightFin",
 					"parent": "Sardine",
-					"pivot": [-1.001, 13, -5],
+					"pivot": [-0.001, 1, 0],
 					"cubes": [
-						{"origin": [-1, 12, -5], "size": [0, 1, 2], "pivot": [-1.001, 13, -5], "rotation": [0, -30, 0], "uv": [0, 4]}
+						{"origin": [-0.5, 0, 0], "size": [0, 1, 2], "pivot": [-0.5, 1, 0], "rotation": [0, -25, 0], "uv": [0, 4]}
 					]
 				},
 				{
 					"name": "LeftFin",
 					"parent": "Sardine",
-					"pivot": [0, 13, -5],
+					"pivot": [1, 1, 0],
 					"cubes": [
-						{"origin": [0, 12, -5], "size": [0, 1, 2], "pivot": [0, 13, -5], "rotation": [0, 30, 0], "uv": [0, 3]}
+						{"origin": [0.5, 0, 0], "size": [0, 1, 2], "pivot": [0.5, 1, 0], "rotation": [0, 25, 0], "uv": [0, 3]}
 					]
 				}
 			]

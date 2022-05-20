@@ -1,4 +1,4 @@
-package net.slimey.aquatical.entity.client;
+package net.slimey.aquatical.entity.client.renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.slimey.aquatical.Aquatical;
+import net.slimey.aquatical.entity.client.models.SardineModel;
 import net.slimey.aquatical.entity.custom.SardineEntity;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
@@ -25,7 +26,7 @@ public class SardineRenderer extends GeoEntityRenderer<SardineEntity> {
     public RenderType getRenderType(SardineEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(1.3F, 1.3F, 1.3F);
+        stack.scale(1.5F, 1.5F, 1.5F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }

@@ -34,10 +34,15 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> THRESHER_SHARK_SPAWN_EGG = ITEMS.register("thresher_shark_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.THRESHER_SHARK,0x948e8d, 0x3b3635,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.THRESHER_SHARK,0x948e8d, 0x606373,
                     new Item.Properties().tab(ModCreativeModeTab.TAB_AQUATICAL)));
+
     public static final RegistryObject<Item> SARDINE_SPAWN_EGG = ITEMS.register("sardine_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntityTypes.THRESHER_SHARK,0x948e8d, 0x3b3635,
+            () -> new ForgeSpawnEggItem(ModEntityTypes.SARDINE,0x606373, 0x626885,
+                    new Item.Properties().tab(ModCreativeModeTab.TAB_AQUATICAL)));
+
+    public static final RegistryObject<Item> PAYARA_SPAWN_EGG = ITEMS.register("payara_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.PAYARA,0x72736b, 0x474746,
                     new Item.Properties().tab(ModCreativeModeTab.TAB_AQUATICAL)));
 
     public static void register(IEventBus eventBus) {

@@ -1,4 +1,4 @@
-package net.slimey.aquatical.entity.client;
+package net.slimey.aquatical.entity.client.models;
 
 import net.minecraft.resources.ResourceLocation;
 import net.slimey.aquatical.Aquatical;
