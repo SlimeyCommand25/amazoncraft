@@ -10,9 +10,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.slimey.amazoncraft.block.ModBlocks;
 import net.slimey.amazoncraft.entity.ModEntityTypes;
+import net.slimey.amazoncraft.entity.client.renderers.DwarfCaimanRenderer;
 import net.slimey.amazoncraft.entity.client.renderers.PayaraRenderer;
-import net.slimey.amazoncraft.entity.client.renderers.SardineRenderer;
-import net.slimey.amazoncraft.entity.client.renderers.ThreshersharkRenderer;
 import net.slimey.amazoncraft.item.ModItems;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -43,8 +42,7 @@ public class Amazoncraft {
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void clientSetup(final FMLClientSetupEvent event) {
-        EntityRenderers.register(ModEntityTypes.SARDINE.get(), SardineRenderer::new);
-        EntityRenderers.register(ModEntityTypes.THRESHER_SHARK.get(), ThreshersharkRenderer::new);
+        EntityRenderers.register(ModEntityTypes.DWARF_CAIMAN.get(), DwarfCaimanRenderer::new);
         EntityRenderers.register(ModEntityTypes.PAYARA.get(), PayaraRenderer::new);
     }
 

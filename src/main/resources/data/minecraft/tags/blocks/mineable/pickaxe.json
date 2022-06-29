@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "aquatical:barrel_sponge",
-    "aquatical:dead_barrel_sponge"
+    "amazoncraft:barrel_sponge",
+    "amazoncraft:dead_barrel_sponge"
   ]
 }

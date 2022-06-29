@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"walk": {
+		"animation.dwarfcaiman.walk": {
 			"loop": true,
 			"animation_length": 1.5,
 			"bones": {
@@ -124,7 +124,7 @@
 				}
 			}
 		},
-		"idle": {
+		"animation.dwarfcaiman.idle": {
 			"loop": true,
 			"animation_length": 1,
 			"bones": {

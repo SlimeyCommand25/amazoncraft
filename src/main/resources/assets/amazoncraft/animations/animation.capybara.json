@@ -1,59 +1,59 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"walk": {
+		"animation.capybara.walk": {
 			"loop": true,
 			"animation_length": 1,
 			"bones": {
 				"FrontRightLeg": {
 					"rotation": {
 						"0.0": {
-							"vector": [10, 0, 0]
+							"vector": [20, 0, 0]
 						},
 						"0.5": {
-							"vector": [-10, 0, 0]
+							"vector": [-20, 0, 0]
 						},
 						"1.0": {
-							"vector": [10, 0, 0]
+							"vector": [20, 0, 0]
 						}
 					}
 				},
 				"BackRightLeg": {
 					"rotation": {
 						"0.0": {
-							"vector": [10, 0, 0]
+							"vector": [20, 0, 0]
 						},
 						"0.5": {
-							"vector": [-10, 0, 0]
+							"vector": [-20, 0, 0]
 						},
 						"1.0": {
-							"vector": [10, 0, 0]
+							"vector": [20, 0, 0]
 						}
 					}
 				},
 				"BackLeftLeg": {
 					"rotation": {
 						"0.0": {
-							"vector": [-10, 0, 0]
+							"vector": [-20, 0, 0]
 						},
 						"0.5": {
-							"vector": [10, 0, 0]
+							"vector": [20, 0, 0]
 						},
 						"1.0": {
-							"vector": [-10, 0, 0]
+							"vector": [-20, 0, 0]
 						}
 					}
 				},
 				"FrontLeftLeg": {
 					"rotation": {
 						"0.0": {
-							"vector": [-10, 0, 0]
+							"vector": [-20, 0, 0]
 						},
 						"0.5": {
-							"vector": [10, 0, 0]
+							"vector": [20, 0, 0]
 						},
 						"1.0": {
-							"vector": [-10, 0, 0]
+							"vector": [-20, 0, 0]
 						}
 					}
 				},
@@ -85,7 +85,7 @@
 				}
 			}
 		},
-		"idle": {
+		"animation.capybara.idle": {
 			"loop": true,
 			"animation_length": 1,
 			"bones": {

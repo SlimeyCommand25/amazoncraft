@@ -1,17 +1,7 @@
 {
-  "item.amazoncraft.gold_coin": "Gold Coin",
-
-  "item.amazoncraft.raw_sardine": "Raw Sardine",
-  "item.amazoncraft.cooked_sardine": "Cooked Sardine",
-
-  "item.amazoncraft.diving_helmet": "Diving Helmet",
-
-  "item.amazoncraft.thresher_shark_spawn_egg": "Thresher Shark Spawn Egg",
-  "item.amazoncraft.sardine_spawn_egg": "Sardine Spawn Egg",
+  "item.amazoncraft.capybara_spawn_egg": "Capybara Spawn Egg",
+  "item.amazoncraft.dwarf_caiman_spawn_egg": "Dwarf Caiman Spawn Egg",
   "item.amazoncraft.payara_spawn_egg": "Payara Spawn Egg",
-
-  "block.amazoncraft.barrel_sponge": "Barrel Sponge",
-  "block.amazoncraft.dead_barrel_sponge": "Dead Barrel Sponge",
 
   "itemGroup.amazoncrafttab": "Amazoncraft Mod"
 }

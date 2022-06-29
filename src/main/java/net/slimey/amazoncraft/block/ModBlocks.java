@@ -23,13 +23,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Amazoncraft.MOD_ID);
 
-    public static final RegistryObject<Block> BARREL_SPONGE = registryBlock("barrel_sponge",
-            ()-> new Block(BlockBehaviour.Properties.of(Material.SPONGE)
-                    .strength(0.6f, 0.2f).sound(SoundType.WET_GRASS)),ModCreativeModeTab.TAB_AQUATICAL);
-
-    public static final RegistryObject<Block> DEAD_BARREL_SPONGE = registryBlock("dead_barrel_sponge",
-            ()-> new Block(BlockBehaviour.Properties.of(Material.SPONGE, MaterialColor.COLOR_GRAY)
-                    .strength(0.9f, 0.2f).sound(SoundType.CORAL_BLOCK)), ModCreativeModeTab.TAB_AQUATICAL);
 
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name,block);

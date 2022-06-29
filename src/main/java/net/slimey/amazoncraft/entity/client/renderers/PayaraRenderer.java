@@ -26,7 +26,7 @@ public class PayaraRenderer extends GeoEntityRenderer<PayaraEntity> {
     public RenderType getRenderType(PayaraEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(1.2F, 1.2F, 1.2F);
+        stack.scale(0.8F, 0.8F, 0.8F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }

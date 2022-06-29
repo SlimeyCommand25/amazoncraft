@@ -7,12 +7,12 @@ import net.slimey.amazoncraft.entity.ModEntityTypes;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.slimey.amazoncraft.entity.client.renderers.CapybaraRenderer;
+import net.slimey.amazoncraft.entity.client.renderers.DwarfCaimanRenderer;
 import net.slimey.amazoncraft.entity.client.renderers.PayaraRenderer;
-import net.slimey.amazoncraft.entity.client.renderers.SardineRenderer;
-import net.slimey.amazoncraft.entity.client.renderers.ThreshersharkRenderer;
+import net.slimey.amazoncraft.entity.custom.CapybaraEntity;
+import net.slimey.amazoncraft.entity.custom.DwarfcaimanEntity;
 import net.slimey.amazoncraft.entity.custom.PayaraEntity;
-import net.slimey.amazoncraft.entity.custom.SardineEntity;
-import net.slimey.amazoncraft.entity.custom.ThreshersharkEntity;
 
 
 @Mod.EventBusSubscriber(modid = Amazoncraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -20,15 +20,15 @@ public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(ModEntityTypes.THRESHER_SHARK.get(), ThreshersharkEntity.setAttributes());
-        event.put(ModEntityTypes.SARDINE.get(), SardineEntity.setAttributes());
+        event.put(ModEntityTypes.CAPYBARA.get(), CapybaraEntity.setAttributes());
+        event.put(ModEntityTypes.DWARF_CAIMAN.get(), DwarfcaimanEntity.setAttributes());
         event.put(ModEntityTypes.PAYARA.get(), PayaraEntity.setAttributes());
     }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        EntityRenderers.register(ModEntityTypes.THRESHER_SHARK.get(), ThreshersharkRenderer::new);
-        EntityRenderers.register(ModEntityTypes.SARDINE.get(), SardineRenderer::new);
+        EntityRenderers.register(ModEntityTypes.CAPYBARA.get(), CapybaraRenderer::new);
+        EntityRenderers.register(ModEntityTypes.DWARF_CAIMAN.get(), DwarfCaimanRenderer::new);
         EntityRenderers.register(ModEntityTypes.PAYARA.get(), PayaraRenderer::new);
     }
 }
