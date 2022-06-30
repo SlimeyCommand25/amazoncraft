@@ -13,6 +13,7 @@ import net.slimey.amazoncraft.entity.ModEntityTypes;
 import net.slimey.amazoncraft.entity.client.renderers.DwarfCaimanRenderer;
 import net.slimey.amazoncraft.entity.client.renderers.PayaraRenderer;
 import net.slimey.amazoncraft.item.ModItems;
+import net.slimey.amazoncraft.sounds.ModSounds;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -31,6 +32,7 @@ public class Amazoncraft {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModSounds.register(eventBus);
 
         ModEntityTypes.register(eventBus);
 
@@ -42,8 +44,7 @@ public class Amazoncraft {
         MinecraftForge.EVENT_BUS.register(this);
     }
     private void clientSetup(final FMLClientSetupEvent event) {
-        EntityRenderers.register(ModEntityTypes.DWARF_CAIMAN.get(), DwarfCaimanRenderer::new);
-        EntityRenderers.register(ModEntityTypes.PAYARA.get(), PayaraRenderer::new);
+
     }
 
     private void setup(final FMLCommonSetupEvent event) {

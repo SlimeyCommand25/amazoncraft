@@ -3,5 +3,9 @@
   "item.amazoncraft.dwarf_caiman_spawn_egg": "Dwarf Caiman Spawn Egg",
   "item.amazoncraft.payara_spawn_egg": "Payara Spawn Egg",
 
-  "itemGroup.amazoncrafttab": "Amazoncraft Mod"
+  "itemGroup.amazoncrafttab": "Amazoncraft Mod",
+
+  "sounds.amazoncraft.capybara_chirp": "Capybara chirps",
+  "sounds.amazoncraft.capybara_squeak": "Capybara squeaks",
+  "sounds.amazoncraft.capybara_death": "Capybara dies"
 }

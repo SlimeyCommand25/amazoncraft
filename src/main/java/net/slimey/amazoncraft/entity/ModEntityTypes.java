@@ -19,7 +19,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<CapybaraEntity>> CAPYBARA =
             ENTITY_TYPES.register("capybara",
                     () -> EntityType.Builder.of(CapybaraEntity::new, MobCategory.CREATURE)
-                            .sized(1.1f, 1.1f)
+                            .sized(1.0f, 1.0f)
                             .build(new ResourceLocation(Amazoncraft.MOD_ID, "capybara").toString()));
 
     public static final RegistryObject<EntityType<DwarfcaimanEntity>> DWARF_CAIMAN =

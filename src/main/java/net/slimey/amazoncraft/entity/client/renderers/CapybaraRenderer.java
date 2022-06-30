@@ -28,8 +28,15 @@ public class CapybaraRenderer extends GeoEntityRenderer<CapybaraEntity> {
     public RenderType getRenderType(CapybaraEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(0.8F, 0.8F, 0.8F);
+        if(animatable.isBaby()) {
+            stack.scale(0.6F, 0.6F, 0.6F);
+        } else {
+            stack.scale(0.9F, 0.9F, 0.9F);
+        }
+
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
+
     }
+
 }
 

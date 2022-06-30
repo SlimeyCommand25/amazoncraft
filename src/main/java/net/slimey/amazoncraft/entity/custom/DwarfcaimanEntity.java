@@ -57,7 +57,7 @@ public class DwarfcaimanEntity extends Turtle implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 7.0D)
                 .add(Attributes.ATTACK_DAMAGE, 1.0f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 1.2f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.6f).build();
     }
 
     @Override

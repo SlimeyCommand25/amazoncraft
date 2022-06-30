@@ -1,0 +1,16 @@
+{
+  "capybara_chirp": {
+    "subtitle": "sound.amazoncraft.capybara_chirp",
+    "sounds": [
+      "amazoncraft:capybara_chirp_1",
+      "amazoncraft:capybara_chirp_2",
+      "amazoncraft:capybara_chirp_3"
+    ]
+  },
+  "capybara_squeak": {
+    "subtitle": "sound.amazoncraft.capybara_squeak",
+    "sounds": [
+      "amazoncraft:capybara"
+      ]
+  }
+}
