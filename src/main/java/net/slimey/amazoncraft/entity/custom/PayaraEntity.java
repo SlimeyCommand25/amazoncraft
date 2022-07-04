@@ -24,10 +24,10 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 
-public class PayaraEntity extends AbstractSchoolingFish implements IAnimatable {
+public class PayaraEntity extends AbstractFish implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public PayaraEntity(EntityType<? extends AbstractSchoolingFish> entityType, Level level) {
+    public PayaraEntity(EntityType<? extends AbstractFish> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -66,7 +66,6 @@ public class PayaraEntity extends AbstractSchoolingFish implements IAnimatable {
         this.goalSelector.addGoal(0, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(2, (new RandomSwimmingGoal(this, 1.0D, 10)));
-        this.goalSelector.addGoal(3, new FollowFlockLeaderGoal(this));
     }
 
     @Override
