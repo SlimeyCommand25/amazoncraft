@@ -63,9 +63,6 @@ public class CapybaraEntity extends TamableAnimal implements ContainerListener, 
     private static final Ingredient FOOD_ITEMS = Ingredient.of(Items.MELON_SLICE);
     private AnimationFactory factory = new AnimationFactory(this);
     private static final EntityDataAccessor<Boolean> DATA_ID_CHEST = SynchedEntityData.defineId(CapybaraEntity.class, EntityDataSerializers.BOOLEAN);
-    public static final int EQUIPMENT_SLOT_OFFSET = 400;
-    public static final int CHEST_SLOT_OFFSET = 499;
-    public static final int INVENTORY_SLOT_OFFSET = 500;
     protected SimpleContainer inventory;
     private static final EntityDataAccessor<Byte> DATA_ID_FLAGS = SynchedEntityData.defineId(CapybaraEntity.class, EntityDataSerializers.BYTE);
     private static final EntityDataAccessor<Optional<UUID>> DATA_ID_OWNER_UUID = SynchedEntityData.defineId(CapybaraEntity.class, EntityDataSerializers.OPTIONAL_UUID);
@@ -90,10 +87,11 @@ public class CapybaraEntity extends TamableAnimal implements ContainerListener, 
             return PlayState.CONTINUE;
         }
 
+
         event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.capybara.idle", true));
         return PlayState.CONTINUE;
-    }
 
+    }
     @Override
     public void registerControllers(AnimationData data) {
         data.addAnimationController(new AnimationController(this, "controller",
@@ -156,11 +154,6 @@ public class CapybaraEntity extends TamableAnimal implements ContainerListener, 
 
     }
 
-    public boolean isTamed() {
-        return this.getFlag(2);
-    }
-
-
     @Override
     public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
@@ -198,7 +191,7 @@ public class CapybaraEntity extends TamableAnimal implements ContainerListener, 
                 return InteractionResult.SUCCESS;
             }
             if (!this.isBaby()) {
-                if (this.isTamed() && pPlayer.isSecondaryUseActive()) {
+                if (this.isTame() && pPlayer.isSecondaryUseActive()) {
                     this.openInventory(pPlayer);
                     return InteractionResult.sidedSuccess(this.level.isClientSide);
                 }
@@ -227,7 +220,7 @@ public class CapybaraEntity extends TamableAnimal implements ContainerListener, 
     }
 
     public void openInventory(Player pPlayerEntity) {
-        if (!this.level.isClientSide && (!this.isVehicle() || this.hasPassenger(pPlayerEntity)) && this.isTamed()) {
+        if (!this.level.isClientSide && this.isTame()) {
             pPlayerEntity.openHorseInventory(this, this.inventory);
         }
 
